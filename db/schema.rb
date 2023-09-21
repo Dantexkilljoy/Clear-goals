@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_09_20_211520) do
+ActiveRecord::Schema.define(version: 2023_09_21_145330) do
+
+  create_table "action_plans", force: :cascade do |t|
+    t.string "time"
+    t.integer "goal_id"
+    t.date "date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "goals", force: :cascade do |t|
     t.string "name"
