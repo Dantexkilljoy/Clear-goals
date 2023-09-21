@@ -1,4 +1,42 @@
 Rails.application.routes.draw do
+  # Routes for the Celebration resource:
+
+  # CREATE
+  post("/insert_celebration", { :controller => "celebrations", :action => "create" })
+          
+  # READ
+  get("/celebrations", { :controller => "celebrations", :action => "index" })
+  
+  get("/celebrations/:path_id", { :controller => "celebrations", :action => "show" })
+  
+  # UPDATE
+  
+  post("/modify_celebration/:path_id", { :controller => "celebrations", :action => "update" })
+  
+  # DELETE
+  get("/delete_celebration/:path_id", { :controller => "celebrations", :action => "destroy" })
+
+  #------------------------------
+
+  # Routes for the Step resource:
+
+  # CREATE
+  post("/insert_step", { :controller => "steps", :action => "create" })
+          
+  # READ
+  get("/steps", { :controller => "steps", :action => "index" })
+  
+  get("/steps/:path_id", { :controller => "steps", :action => "show" })
+  
+  # UPDATE
+  
+  post("/modify_step/:path_id", { :controller => "steps", :action => "update" })
+  
+  # DELETE
+  get("/delete_step/:path_id", { :controller => "steps", :action => "destroy" })
+
+  #------------------------------
+
   # Routes for the Action plan resource:
 
   # CREATE
