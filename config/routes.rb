@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users
   # Routes for the Celebration resource:
-
+  root to: "goals#index"
   # CREATE
   post("/insert_celebration", { :controller => "celebrations", :action => "create" })
           
@@ -102,7 +103,7 @@ Rails.application.routes.draw do
              
   #------------------------------
 
-  root "goal#index"
+  
 
 
 end
